@@ -426,6 +426,9 @@
   .left .content .social a span:hover{
     background: #f12020;
   }
+  .text{
+    cursor:pointer;
+  }
 
 
 
