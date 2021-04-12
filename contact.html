@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -32,22 +33,32 @@
         <!-- Menu Icon -->
     </section>
     <section class="ContactContainer">
-        <div class="app">
-            <form>
-                <h2>Contact us...</h2>
-
-                <label>Name</label>
-                <input placholder="name"/>
-
-                <label>email</label>
-                <input placholder="Email"/>
-
-                <label>Message</label>
-                <textarea placeholder="Message"></textarea>
-
-                <button type="submit">Submit</button>
+        <div class="container">  
+            <form id="contact" action="" method="post">
+                <h3>Quick Contact</h3>
+                <h4>Contact us today, and get reply with in 24 hours!</h4>
+                <fieldset>
+                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                <input placeholder="Your Web Site starts with http://" type="url" tabindex="4" required>
+                </fieldset>
+                <fieldset>
+                <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
             </form>
-        </div>
+            
+            
+            </div>
     </section>
     <section class="FooterContainer">
         <footer>
