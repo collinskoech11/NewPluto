@@ -9,6 +9,7 @@
 ============================================================================================================================================**/
 
 /*Styling links*/
+/*Styling links*/
 nav a{
   font-size: 16px;
   font-weight: 300;
@@ -53,8 +54,8 @@ nav .paper-shadow-bottom-z-2 {
   box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
 }
 
-/*Setting Up nav Layouts*/
-nav .nav-inverse{
+/*Setting Up Navbar Layouts*/
+nav .navbar-inverse{
   color: #000;
   background: #fff;
   border:none;
@@ -68,7 +69,7 @@ nav .container-fluid{
   right:0;
   left:0;
 }
-nav .nav-body{
+nav .navbar-body{
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -78,12 +79,12 @@ nav .nav-body{
   height: 100%;
   position: relative;
 }
-nav div.nav-end{
+nav div.navbar-end{
   align-items: flex-start;
   -webkit-align-items: flex-start;
 }
-nav div.nav-start,
-nav div.nav-end{
+nav div.navbar-start,
+nav div.navbar-end{
   flex: 1;
   -webkit-flex: 1;
   display: flex;
@@ -93,12 +94,12 @@ nav div.nav-end{
   -webkit-align-items: center;
   justify-content: space-around;
 }
-nav div.nav-start .logo{
+nav div.navbar-start .logo{
   opacity: 0.6;
   width:30px;
 }
 
-/*Integrating Two navs Together*/
+/*Integrating Two Navbars Together*/
 nav .nav{
   z-index: 2;
 }
@@ -107,7 +108,7 @@ nav .tabs{
   z-index: 1;
   position: relative;
 }
-nav .tabs .nav-body{
+nav .tabs .navbar-body{
   padding: 0;
   margin-bottom: 0;
 }
@@ -232,23 +233,23 @@ nav div.search.focused.not-null .ico-btn.search-btn{
 }
 
 /*Styling Tabs*/
-nav .tabs .nav-body li.active a{
+nav .tabs .navbar-body li.active a{
   color: #333;
 }
-nav .tabs .nav-body li{
+nav .tabs .navbar-body li{
   -webkit-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
   -moz-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
   -ms-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
 }
-nav .tabs .nav-body li:hover{
+nav .tabs .navbar-body li:hover{
   background: rgba(0,0,0,0.02);
 }
-nav .tabs .nav-body li:active{
+nav .tabs .navbar-body li:active{
   background: rgba(0,0,0,0.05);
 }
-nav .tabs .nav-body li a:hover, .tabs .nav-body li a:active{
+nav .tabs .navbar-body li a:hover, .tabs .navbar-body li a:active{
   background: rgba(0,0,0,0);
   color: #5bc0de;
 }
@@ -280,7 +281,6 @@ nav .tab-highlighter{
       margin-right: -30px;
   }
 }
-
   /**Carousel section
   ===============================================================================================================================================**/
 
