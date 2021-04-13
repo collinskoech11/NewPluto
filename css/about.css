@@ -331,18 +331,22 @@ button {
 
 
 /* aboutcontainer */
+.aboutcontainer{
+  padding-top: 10%;
+
+}
 .about{
   background-color: rgb(119,136,153);
   width:80%;
   margin:auto;
-  padding-top: 5%;
+  flex-direction: column;
+  display: flex;
   align-items: center; 
   justify-content: center;
   border-radius: 10px;
 }
 .about:hover{
-  box-shadow: #34414e;
-  transform: scale(1.1);
+
 }
 .about h1{
   text-align: center;
@@ -361,7 +365,6 @@ button {
 
 /* footer */
 footer{
-  margin-top: 10%;
   bottom:0px;
   width:100%;
   background:rgb(54,69,79);

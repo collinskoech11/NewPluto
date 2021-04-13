@@ -70,6 +70,56 @@ ul li a{
     min-height: 250px;
     height: auto;
  }
+
+/* aboutus section */
+ .aboutus{
+   background-color:rgb(192,192,192);
+ }
+ .container1{
+  max-width: 100%;
+  margin: auto;
+  overflow: auto;
+  padding: 70px;
+ }
+ .row{
+   font-size: 20px;
+   color: #000;
+ }
+
+/* container2 section */
+
+ .container2 .row{
+  margin-bottom: 3rem;
+}
+.container2 img
+{
+	width:100%;
+	padding: 20px 0;
+	transition:1s;
+	cursor:pointer;
+}
+.container2 img:hover
+{
+	transform: scale(1.1)
+}
+ #text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:8rem;
+  color: #f12020;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
   
   /* footer
   ============================================================================================================================= */
