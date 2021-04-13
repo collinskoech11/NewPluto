@@ -19,8 +19,8 @@ ul li a{
   ===============================================================================================================================================**/
 
   .carousel {
-    width: 95vw;
-    height: 500px;
+    width: 99vw;
+    height: 300px;
     border-radius: 3px;
     overflow: hidden;
     position: relative;
