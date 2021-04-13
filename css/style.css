@@ -7,285 +7,75 @@
 
 /**Header styling
 ============================================================================================================================================**/
-
-/*Styling links*/
-/*Styling links*/
-nav a{
-  font-size: 16px;
-  font-weight: 300;
-  font-family: "Montserrat", sans-serif;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 10px;
-  -webkit-border-radius:2px;
-  -moz-border-radius:2px;
-  border-radius:2px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor:pointer;
-  margin: 4px;
-}
-nav a:hover, nav a:active, nav a{
-  text-decoration: none;
-  color: rgba(0,0,0,0.6);
-}
-nav a:hover{
-  background: rgba(0,0,0,0.06);
-}
-nav a:active{
-  color: rgba(0,0,0,0.9);
-  background: rgba(0,0,0,0.1);
-}
-nav a{
-  color: #5bc0de;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  float: right;
-}
-
-/*Shadow*/
-nav .paper-shadow-bottom-z-2 {
-  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
-}
-
-/*Setting Up Navbar Layouts*/
-nav .navbar-inverse{
-  color: #000;
-  background: #fff;
-  border:none;
-  min-height: 50px;
-  max-height: 50px;
-  height: 50px;
-}
-nav .container-fluid{
-  position: absolute;
-  top:0; bottom: 0;
-  right:0;
-  left:0;
-}
-nav .navbar-body{
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: row;
-  align-items: center;
-  -webkit-align-items: center;
-  justify-content: space-between;
+html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url('https://unsplash.it/800/600?image=998');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar.main-nav, .navbar.sub-nav {
   position: relative;
+  border-radius: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, .6);
+  user-select: none;
+  outline: 0;
 }
-nav div.navbar-end{
-  align-items: flex-start;
-  -webkit-align-items: flex-start;
+.navbar.main-nav .nav-item, .navbar.sub-nav .nav-item {
+  position: relative;
+  padding: 0.25em 0;
 }
-nav div.navbar-start,
-nav div.navbar-end{
-  flex: 1;
-  -webkit-flex: 1;
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: row;
-  align-items: center;
-  -webkit-align-items: center;
-  justify-content: space-around;
+.navbar.main-nav .nav-item, .navbar.sub-nav .nav-item, .navbar.main-nav .nav-item .nav-link, .navbar.sub-nav .nav-item .nav-link {
+  transition: color 0.5s ease;
 }
-nav div.navbar-start .logo{
-  opacity: 0.6;
-  width:30px;
+.navbar.main-nav .nav-item:hover .nav-link, .navbar.sub-nav .nav-item:hover .nav-link, .navbar.main-nav .nav-item.hover .nav-link, .navbar.sub-nav .nav-item.hover .nav-link, .navbar.main-nav .nav-item.active .nav-link, .navbar.sub-nav .nav-item.active .nav-link {
+  color: #0275d8;
 }
-
-/*Integrating Two Navbars Together*/
-nav .nav{
+.navbar.main-nav {
+  border-bottom: 0.2em solid #0275d8;
+  background-color: rgba(0, 0, 0, .6);
   z-index: 2;
 }
-nav .tabs{
-  margin-top: 50px;
+.navbar.main-nav .nav-item, .navbar.main-nav .nav-item .nav-link {
+  color: #ccc;
+}
+.navbar.main-nav .nav-item.active:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 0.4em solid transparent;
+  border-right: 0.4em solid transparent;
+  border-bottom: 0.4em solid #0275d8;
+  margin-left: -0.4em;
+}
+.navbar.sub-nav {
+  position: absolute;
+  margin-top: -0.1em;
+  border-bottom: 0.1em solid #0275d8;
+  background-color: rgba(255, 255, 255, .6);
+  width: 100%;
   z-index: 1;
-  position: relative;
 }
-nav .tabs .navbar-body{
-  padding: 0;
-  margin-bottom: 0;
+.navbar.sub-nav .navbar-nav:not(.active) {
+  display: none;
 }
-
-/*Styling Search Textbox*/
-
-nav div.search{
-  background: rgba(0,0,0,0.12);
-  flex: 3;
-  -webkit-flex: 3;
-  margin:6px;
-  -webkit-border-radius:2px;
-  -moz-border-radius:2px;
-  border-radius:2px;
-  cursor: pointer;
-  text-align: center;
-  position: relative;
-  -webkit-transition: all 0.3s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -moz-transition: all 0.3s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -ms-transition: all 0.3s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -o-transition: all 0.3s cubic-bezier(0.21, 0.61, 0.36, 1);
-  transition: all 0.3s cubic-bezier(0.21, 0.61, 0.36, 1);
-}
-nav div.search{
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: row;
-  justify-content: center;
-  -webkit-justify-content: center;
-  align-items: center;
-  -webkit-align-items: center;
-  height: 42px;
-  padding: 0 9px;
-  overflow-x: hidden;
-}
-nav div.search.focused{
-  background: rgba(0,0,0,0.05);
-}
-nav div.search .search-textbox{
-  position: relative;
-  width:60px;
-  height: 100%;
-  background: transparent;
-  border: none;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  text-align: start;
-  color: rgba(0,0,0,1);
-  outline: none;
-  -webkit-transition: all 0.5s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -moz-transition: all 0.5s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -ms-transition: all 0.5s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -o-transition: all 0.5s cubic-bezier(0.21, 0.61, 0.36, 1);
-  transition: all 0.5s cubic-bezier(0.21, 0.61, 0.36, 1);
-  cursor: pointer;
-
-}
-nav div.search.focused .search-textbox{
-  width:100%;
-  cursor: text;
-}
-nav div.search:hover span{
-  -webkit-transform: translateX(40%);
-  -moz-transform: translateX(40%);
-  -ms-transform: translateX(40%);
-  -o-transform: translateX(40%);
-  transform: translateX(40%);
-}
-nav .ico-btn{
-  position: relative;
-  width: 30px;
-  height:30px;
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  border-radius:50%;
-  padding:5px;
-}
-nav .ico-btn.search-btn, .ico-btn.clear-btn{
-  padding:3px;
-  margin: 3px;
-  opacity: 0;
-  visibility: hidden;
-
-}
-nav .ico-btn.clear-btn{
-  margin-right: -30px;
-  -webkit-animation:0.3s SwiftSlideToRight cubic-bezier(0.21, 0.61, 0.36, 1) 0.2s;
-  -o-animation:0.3s SwiftSlideToRight cubic-bezier(0.21, 0.61, 0.36, 1) 0.2s;
-  animation:0.3s SwiftSlideToRight cubic-bezier(0.21, 0.61, 0.36, 1) 0.2s;
-  -webkit-animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;
-  -o-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-nav div.search.focused.not-null.multi-char .ico-btn.clear-btn{
-  margin-right: 0;
-  opacity: 1;
-  visibility: visible;
-  -webkit-animation:0.3s SwiftSlide cubic-bezier(0.21, 0.61, 0.36, 1);
-  -o-animation:0.3s SwiftSlide cubic-bezier(0.21, 0.61, 0.36, 1);
-  animation:0.3s SwiftSlide cubic-bezier(0.21, 0.61, 0.36, 1);
-  -webkit-animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;
-  -o-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-nav .ico-btn{
-  -webkit-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -moz-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -ms-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -o-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-  transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-}
-nav div.search.focused.not-null .ico-btn.search-btn{
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition-duration: 0.6s;
-  -moz-transition-duration: 0.6s;
-  -ms-transition-duration: 0.6s;
-  -o-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-}
-
-/*Styling Tabs*/
-nav .tabs .navbar-body li.active a{
+.navbar.sub-nav .nav-item, .navbar.sub-nav .nav-link {
   color: #333;
 }
-nav .tabs .navbar-body li{
-  -webkit-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -moz-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -ms-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -o-transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-  transition: all 0.2s cubic-bezier(0.21, 0.61, 0.36, 1);
-}
-nav .tabs .navbar-body li:hover{
-  background: rgba(0,0,0,0.02);
-}
-nav .tabs .navbar-body li:active{
-  background: rgba(0,0,0,0.05);
-}
-nav .tabs .navbar-body li a:hover, .tabs .navbar-body li a:active{
-  background: rgba(0,0,0,0);
-  color: #5bc0de;
-}
 
-/*Styling Tab Highlighter*/
-nav .tab-highlighter{
-  height:2px;
-  width: 50px;
-  margin-top: -2px;
-  background: #000;
-  position: absolute;
-  -webkit-transition: all 0.6s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -moz-transition: all 0.6s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -ms-transition: all 0.6s cubic-bezier(0.21, 0.61, 0.36, 1);
-  -o-transition: all 0.6s cubic-bezier(0.21, 0.61, 0.36, 1);
-  transition: all 0.6s cubic-bezier(0.21, 0.61, 0.36, 1);
-}
-
-/*Keyframes*/
-@keyframes SwiftSlide {
-  100%{
-      margin-right: 0;
-      opacity: 1;
-  }
-}
-@keyframes SwiftSlideToRight {
-  100%{
-      opacity:0;
-      margin-right: -30px;
-  }
-}
   /**Carousel section
   ===============================================================================================================================================**/
 
   .carousel {
-    width: 100vw;
+    width: 95vw;
     height: 500px;
     border-radius: 3px;
     overflow: hidden;
