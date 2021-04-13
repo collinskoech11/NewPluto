@@ -7,69 +7,47 @@
 
 /**Header styling
 ============================================================================================================================================**/
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.banner {
+  background: #fff;
+  font-family: Lato, sans-serif;
 }
-body {
-  background-image: url('https://unsplash.it/800/600?image=998');
-  background-repeat: no-repeat;
-  background-size: cover;
+.navbar-nav-primary {
+  text-transform: uppercase;
 }
-.navbar.main-nav, .navbar.sub-nav {
+.navbar-form-search {
   position: relative;
-  border-radius: 0;
-  padding: 0;
-  background-color: rgba(0, 0, 0, .6);
-  user-select: none;
-  outline: 0;
 }
-.navbar.main-nav .nav-item, .navbar.sub-nav .nav-item {
-  position: relative;
-  padding: 0.25em 0;
+.navbar-form-search .form-control {
+  width: 250px;
 }
-.navbar.main-nav .nav-item, .navbar.sub-nav .nav-item, .navbar.main-nav .nav-item .nav-link, .navbar.sub-nav .nav-item .nav-link {
-  transition: color 0.5s ease;
+.navbar-form-search .btn {
+  border: 0;
+  background: transparent;
+  font-size: 18px;
 }
-.navbar.main-nav .nav-item:hover .nav-link, .navbar.sub-nav .nav-item:hover .nav-link, .navbar.main-nav .nav-item.hover .nav-link, .navbar.sub-nav .nav-item.hover .nav-link, .navbar.main-nav .nav-item.active .nav-link, .navbar.sub-nav .nav-item.active .nav-link {
-  color: #0275d8;
+.navbar-form-search .btn:active, .navbar-form-search .btn:hover, .navbar-form-search .btn:focus {
+  color: #000;
+  outline: none;
+  box-shadow: none;
 }
-.navbar.main-nav {
-  border-bottom: 0.2em solid #0275d8;
-  background-color: rgba(0, 0, 0, .6);
-  z-index: 2;
-}
-.navbar.main-nav .nav-item, .navbar.main-nav .nav-item .nav-link {
-  color: #ccc;
-}
-.navbar.main-nav .nav-item.active:after {
-  display: block;
-  content: '';
+.navbar-form-search .search-form-container {
+  text-align: right;
   position: absolute;
-  left: 50%;
-  bottom: 0;
+  width: 300px;
+  overflow: hidden;
+  background: #fff;
+  right: 60px;
+  top: 0;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-form-search .search-form-container.hdn {
   width: 0;
-  height: 0;
-  border-left: 0.4em solid transparent;
-  border-right: 0.4em solid transparent;
-  border-bottom: 0.4em solid #0275d8;
-  margin-left: -0.4em;
 }
-.navbar.sub-nav {
-  position: absolute;
-  margin-top: -0.1em;
-  border-bottom: 0.1em solid #0275d8;
-  background-color: rgba(255, 255, 255, .6);
-  width: 100%;
-  z-index: 1;
+.navbar-form-search .search-form-container .search-input-group {
+  width: 300px;
 }
-.navbar.sub-nav .navbar-nav:not(.active) {
-  display: none;
-}
-.navbar.sub-nav .nav-item, .navbar.sub-nav .nav-link {
-  color: #333;
-}
+
 
   /**Carousel section
   ===============================================================================================================================================**/

@@ -13,38 +13,46 @@
 </head>
 <body>
     <section class="HeaderContainer ">
-       <nav class="navbar navbar-light main-nav">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="#/">home<span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item" data-target="#categories"><a class="nav-link" href="#/categories">browse by category</a></li>
-                    <li class="nav-item" data-target="#auctions"><a class="nav-link" href="#/auctions">auctions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/alerts">auction alerts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/prices">prices</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/help">help</a></li>
+      <nav class="navbar navbar-default banner">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                
+                <form class="navbar-form navbar-right navbar-form-search" role="search">
+                    <div class="search-form-container hdn" id="search-input-container">
+                    <div class="search-input-group">
+                        <button type="button" class="btn btn-default" id="hide-search-input-container"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span></button>
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+                    <button type="submit" class="btn btn-default" id="search-button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </form>
+                <ul class="nav navbar-nav navbar-right navbar-nav-primary">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Publication</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">News</a></li>
                 </ul>
-            </div>
-        </nav>
-        <nav class="navbar navbar-light sub-nav">
-            <div class="container">
-                <ul class="nav navbar-nav" id="categories">
-                    <li class="nav-item"><a class="nav-link" href="#/asian-art">asian art</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/clocks-watches-and-jewellery">clocks watches & jewellery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/collectibles">collectibles</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/decorative-art">decorative art</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/ethnographica-tribal-art">ethnographica & tribal art</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/fine-art">fine art</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/fine-art-and-antiques">fine art & antiques</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/furnature">furnature</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/vintage-fashion-and-textiles">vintage fashion & textiles</a></li>
-                </ul>
-                <ul class="nav navbar-nav" id="auctions">
-                    <li class="nav-item"><a class="nav-link" href="#/current-auctions">current auctions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/auctioneers">auctioneers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/featured-lots">featured lots</a></li>
-                </ul>
-            </div>
-        </nav>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            </nav>
         <!-- Menu Icon -->
     </section>
     <section class="FirstCon">                                          

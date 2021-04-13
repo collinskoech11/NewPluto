@@ -2,51 +2,23 @@
  * ===============================================================================================================================================================
  */
 
-$(function() {
-  'use strict';
+ (function($) {
   
-  function toggle(e) {
-    if (e) e.preventDefault();
-    
-    var $this = $(this),
-        $navbar = $this.parents('.navbar'),
-        $item = $this.parent();
-    
-    $('.nav-item.active', $navbar).removeClass('active');
-    $item.addClass('active');
-    
-    if ($navbar.hasClass('main-nav')) {
-      $('.active', $navbar.siblings('.sub-nav')).removeClass('active');
-      $($item.data('target')).addClass('active');
+  $('#search-button').on('click', function(e) {
+    if($('#search-input-container').hasClass('hdn')) {
+      e.preventDefault();
+      $('#search-input-container').removeClass('hdn')
+      return false;
     }
-  }
+  });
   
-  function leave(e) {
-    var $this = $(this),
-        $navbar = $this.siblings('.main-nav'),
-        $subnav = $('.navbar-nav.active', $this);
-    
-    $('[data-target="#' + $subnav.attr('id') + '"]', $navbar).removeClass('hover');
-    $subnav.removeClass('active');
-  };
+  $('#hide-search-input-container').on('click', function(e) {
+    e.preventDefault();
+    $('#search-input-container').addClass('hdn')
+    return false;
+  });
   
-  function enter(e) {
-    var $this = $(this),
-        $navbar = $this.parents('.navbar');
-    
-    $('.nav-item.hover', $navbar).removeClass('hover');
-    $this.addClass('hover');
-    
-    if ($navbar.hasClass('main-nav')) {
-      $('.active', $navbar.siblings('.sub-nav')).removeClass('active');
-      $($this.data('target')).addClass('active');
-    }
-  }
-  
-  $('.main-nav .nav-link, .sub-nav .nav-link').click(toggle);
-  $('.main-nav .nav-item').mouseenter(enter);
-  $('.sub-nav').mouseleave(leave);
-});
+})(jQuery);
 /**carousel script
  * ==============================================================================================================
  */
